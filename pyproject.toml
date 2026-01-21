@@ -1,7 +1,8 @@
 [project]
 name = "django-auth0"
-version = "0.1.0a1"
+version = "0.1.0b1"
 description = "A django plugin to add auth0 OIDC authentication to django"
+keywords = ["auth0", "django", "OIDC"]
 readme = "README.md"
 license = "MIT"
 authors = [
@@ -9,6 +10,33 @@ authors = [
 ]
 maintainers = [
     { name = "Joachim Brauer", email = "jojjo.b@gmail.com" }
+]
+classifiers = [
+    # How mature is this project? Common values are
+    #   3 - Alpha
+    #   4 - Beta
+    #   5 - Production/Stable
+    "Development Status :: 4 - Beta",
+
+    # License
+    "License :: OSI Approved :: MIT License",
+
+    # Indicate who your project is intended for
+    "Intended Audience :: Developers",
+    'Topic :: Internet :: WWW/HTTP',
+    'Topic :: Internet :: WWW/HTTP :: Session',
+    'Topic :: System :: Systems Administration :: Authentication/Directory',
+
+    # Technical Stuff
+    "Framework :: Django",
+    "Framework :: Django :: 5.2",
+
+    # Specify the Python versions you support here.
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+]
+packages = [
+    { include = "django_auth0"},
 ]
 requires-python = ">=3.13"
 dependencies = [
