@@ -1,0 +1,20 @@
+[project]
+name = "django-auth0"
+version = "0.1.0a1"
+description = "A django plugin to add auth0 OIDC authentication to django"
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "Joachim Brauer", email = "jojjo.b@gmail.com" }
+]
+maintainers = [
+    { name = "Joachim Brauer", email = "jojjo.b@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "authlib>=1.6.6",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
