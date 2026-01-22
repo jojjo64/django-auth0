@@ -5,11 +5,12 @@ description = "A django plugin to add auth0 OIDC authentication to django"
 keywords = ["auth0", "django", "OIDC"]
 readme = "README.md"
 license = "MIT"
+license-files = ["LICEN[CS]E.*"]
 authors = [
-    { name = "Joachim Brauer", email = "jojjo.b@gmail.com" }
+    { name = "jojjo64", email = "jojjo.b@gmail.com" }
 ]
 maintainers = [
-    { name = "Joachim Brauer", email = "jojjo.b@gmail.com" }
+    { name = "jojjo64", email = "jojjo.b@gmail.com" }
 ]
 classifiers = [
     # How mature is this project? Common values are
@@ -39,6 +40,9 @@ requires-python = ">=3.13"
 dependencies = [
     "authlib>=1.6.6",
 ]
+
+[project.urls]
+Repository = "https://github.com/jojjo64/django-auth0"
 
 [build-system]
 requires = ["hatchling"]
