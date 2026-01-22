@@ -7,10 +7,10 @@ readme = "README.md"
 license = "MIT"
 license-files = ["LICEN[CS]E.*"]
 authors = [
-    { name = "jojjo64", email = "jojjo.b@gmail.com" }
+    { name = "jojjo64", email = "rattan_stupse4d@icloud.com" }
 ]
 maintainers = [
-    { name = "jojjo64", email = "jojjo.b@gmail.com" }
+    { name = "jojjo64", email = "rattan_stupse4d@icloud.com" }
 ]
 classifiers = [
     # How mature is this project? Common values are
