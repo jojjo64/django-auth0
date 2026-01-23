@@ -9,7 +9,7 @@ from authlib.integrations.django_client import OAuth
 from django.conf import settings
 from django.contrib import auth
 from django.contrib.auth.base_user import AbstractBaseUser
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, HttpRequest
 from django.shortcuts import redirect
 from django.urls import reverse
 from django.utils.http import url_has_allowed_host_and_scheme
@@ -37,7 +37,7 @@ oauth.register(
 )
 
 
-def auth0_login(request):
+def auth0_login(request: HttpRequest) -> HttpResponse:
     """
     Redirects the user to the Auth0 Universal Login page.
 
@@ -59,7 +59,7 @@ def auth0_login(request):
     )
 
 
-def _add_next_url_to_state(request) -> str:
+def _add_next_url_to_state(request: HttpRequest) -> str:
     """
     Encodes a unique state string including the 'next' URL parameter.
 
@@ -78,7 +78,7 @@ def _add_next_url_to_state(request) -> str:
     return state
 
 
-def auth0_callback(request):
+def auth0_callback(request: HttpRequest) -> HttpResponse:
     """
     Handles the callback from Auth0 after a user logs in.
 
@@ -110,7 +110,7 @@ def auth0_callback(request):
     return HttpResponse(status=400)
 
 
-def _get_next_url_from_state(request, user: AbstractBaseUser) -> str:
+def _get_next_url_from_state(request: HttpRequest, user: AbstractBaseUser) -> str:
     """
     Extracts and decodes the 'next' URL from the state parameter in the callback.
 
@@ -137,7 +137,7 @@ def _get_next_url_from_state(request, user: AbstractBaseUser) -> str:
     return next
 
 
-def auth0_logout(request):
+def auth0_logout(request: HttpRequest) -> HttpResponse:
     """
     Logs the user out of the Django session and redirects to Auth0 for global logout.
 
