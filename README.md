@@ -1,3 +1,5 @@
+![Coverage Status](./reports/coverage/coverage-badge.svg?dummy=8484744)
+
 # django-auth0
 
 A Django plugin to add Auth0 OIDC authentication to Django.
