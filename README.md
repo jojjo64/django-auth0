@@ -127,4 +127,4 @@ You can then use these in your templates:
 ```
 
 ## Credits
-This package is heavily inspired and based on the excellent *django-azure-auth* package.
+This package is heavily inspired and some code parts are based on the excellent [django-azure-auth](https://pypi.org/project/django-azure-auth/) package.
