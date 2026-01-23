@@ -157,7 +157,7 @@ def auth0_logout(request: HttpRequest) -> HttpResponse:
         f"https://{settings.DJANGO_AUTH0['AUTH0_DOMAIN']}/v2/logout?"
         + urlencode(
             {
-                "returnTo": request.build_absolute_uri(reverse("welcome_page")),
+                "returnTo": request.build_absolute_uri("/"),
                 "client_id": settings.DJANGO_AUTH0["AUTH0_CLIENT_ID"],
             },
             quote_via=quote_plus,
