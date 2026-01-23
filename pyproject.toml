@@ -45,7 +45,7 @@ dependencies = [
 Repository = "https://github.com/jojjo64/django-auth0"
 
 [tool.pytest.ini_options]
-addopts = "--cov . -v --cov-report=xml"
+addopts = "--cov . -v --cov-report=xml:reports/coverage/coverage.xml"
 python_files = ["tests.py", "test_*.py",  "*_tests.py"]
 
 [tool.coverage.run]
