@@ -8,10 +8,10 @@ license = "MIT"
 license-files = ["LICEN[CS]E.*"]
 homepage = "https://github.com/jojjo64/django-auth0"
 authors = [
-    { name = "jojjo64", email = "rattan_stupse4d@icloud.com" }
+    { name = "Joachim Brauer", email = "rattan_stupse4d@icloud.com" }
 ]
 maintainers = [
-    { name = "jojjo64", email = "rattan_stupse4d@icloud.com" }
+    { name = "Joachim Brauer", email = "rattan_stupse4d@icloud.com" }
 ]
 classifiers = [
     # How mature is this project? Common values are
