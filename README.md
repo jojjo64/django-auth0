@@ -131,3 +131,8 @@ You can then use these in your templates:
 ## Credits
 * The basic code to implement Auth0 OIDC authentication is taken from the basic example code provided by Auth0.
 * Some parts of this package (e.g. the role to group mapping) are heavily inspired and some code parts are based on the excellent [django-azure-auth](https://pypi.org/project/django-azure-auth/) package.
+
+## This package is maybe obsolete
+Just found this package which does almost the same: [django-auth0-authbackend](https://pypi.org/project/django-auth0-authbackend/)
+
+But anyway -- it was a good exercise to get to the point where I finally could build my first (not published) pypi package...
