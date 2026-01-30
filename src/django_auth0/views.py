@@ -54,7 +54,7 @@ def auth0_login(request: HttpRequest) -> HttpResponse:
     logger.debug(f'auth0_login state "{state}"')
     return oauth.auth0.authorize_redirect(
         request,
-        request.build_absolute_uri(reverse("callback")),
+        request.build_absolute_uri(reverse("auth0_auth:callback")),
         state=state,
     )
 
