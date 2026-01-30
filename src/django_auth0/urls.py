@@ -2,7 +2,7 @@ from django.urls import path
 
 from django_auth0.views import auth0_login, auth0_callback, auth0_logout
 
-app_name = "auth0_auth"
+app_name = "django_auth0"
 urlpatterns = [
     path("login", auth0_login, name="login"),
     path("callback", auth0_callback, name="callback"),
