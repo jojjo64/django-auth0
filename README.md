@@ -82,17 +82,19 @@ DJANGO_AUTH0 = {
 
 #### Settings Explanation
 
-- `AUTH0_CLIENT_ID`, `AUTH0_CLIENT_SECRET`, `AUTH0_DOMAIN`: Standard Auth0 application credentials.
-- `SERVER_METADATA_URL`: The URL to the OIDC well-known configuration.
-- `AUDIENCE_AKA_ROLE_NAMESPACE`: Used as the audience for the token request and as a fallback prefix for the roles claim.
-- `SCOPE`: The OIDC scopes to request.
-- `CREATE_DJANGO_USER_FROM_AUTHO`: If `True`, a new Django user will be created if the Auth0 user doesn't exist locally.
-- `UPDATE_DJANGO_USER_FROM_AUTHO`: If `True`, the Django user's attributes will be updated from Auth0 on every login.
-- `AUTH0_TO_USER_ATTRIBUTE_MAPPING`: A dictionary mapping Auth0 profile keys to Django User model fields. The `username` field is mandatory and `|` characters in Auth0 IDs are automatically replaced with `_`.
-- `GET_FIRST_LAST_NAME_FROM_AUTHO_NAME`: If `True`, the backend will attempt to split the `name` field from Auth0 into `first_name` and `last_name`.
-- `AUTH0_TO_USER_ATTRIBUTE_MAPPING_FUNCTION`: A callable that takes the `token` and returns a dictionary of Django user attributes. If provided, it overrides the default mapping logic.
-- `ROLES_CLAIM`: The key in the Auth0 `userinfo` that contains the user's roles.
-- `AUTH0_ROLE_TO_GROUP_AND_USER_FLAG_MAPPINGS`: A dictionary where keys are Auth0 role names and values are dictionaries specifying which Django `GROUPS` and `FLAGS` (is_staff, is_superuser, is_active) should be assigned to users with that role.
+| Setting | Description |
+| :--- | :--- |
+| `AUTH0_CLIENT_ID`, `AUTH0_CLIENT_SECRET`, `AUTH0_DOMAIN` | Standard Auth0 application credentials. |
+| `SERVER_METADATA_URL` | The URL to the OIDC well-known configuration. |
+| `AUDIENCE_AKA_ROLE_NAMESPACE` | Used as the audience for the token request and as a fallback prefix for the roles claim. |
+| `SCOPE` | The OIDC scopes to request. |
+| `CREATE_DJANGO_USER_FROM_AUTHO` | If `True`, a new Django user will be created if the Auth0 user doesn't exist locally. |
+| `UPDATE_DJANGO_USER_FROM_AUTHO` | If `True`, the Django user's attributes will be updated from Auth0 on every login. |
+| `AUTH0_TO_USER_ATTRIBUTE_MAPPING` | A dictionary mapping Auth0 profile keys to Django User model fields. The `username` field is mandatory and `\|` characters in Auth0 IDs are automatically replaced with `_`. |
+| `GET_FIRST_LAST_NAME_FROM_AUTHO_NAME` | If `True`, the backend will attempt to split the `name` field from Auth0 into `first_name` and `last_name`. |
+| `AUTH0_TO_USER_ATTRIBUTE_MAPPING_FUNCTION` | A callable that takes the `token` and returns a dictionary of Django user attributes. If provided, it overrides the default mapping logic. |
+| `ROLES_CLAIM` | The key in the Auth0 `userinfo` that contains the user's roles. |
+| `AUTH0_ROLE_TO_GROUP_AND_USER_FLAG_MAPPINGS` | A dictionary where keys are Auth0 role names and values are dictionaries specifying which Django `GROUPS` and `FLAGS` (is_staff, is_superuser, is_active) should be assigned to users with that role. |
 
 ## Usage
 
@@ -127,4 +129,5 @@ You can then use these in your templates:
 ```
 
 ## Credits
-This package is heavily inspired and some code parts are based on the excellent [django-azure-auth](https://pypi.org/project/django-azure-auth/) package.
+* The basic code to implement Auth0 OIDC authentication is taken from the basic example code provided by Auth0.
+* Some parts of this package (e.g. the role to group mapping) are heavily inspired and some code parts are based on the excellent [django-azure-auth](https://pypi.org/project/django-azure-auth/) package.
