@@ -105,27 +105,27 @@ from django.urls import path, include
 
 urlpatterns = [
     # ... your other urls
-    path("auth0_auth/", include("django_auth0.urls")),
+    path("django_auth0/", include("django_auth0.urls")),
 ]
 ```
 
 This will provide the following endpoints:
-- `/auth0_auth/login`: Initiates the Auth0 login flow.
-- `/auth0_auth/logout`: Logs the user out of Django and Auth0.
-- `/auth0_auth/callback`: The callback URL for Auth0 (ensure this is registered in your Auth0 Application settings).
+- `/django_auth0/login`: Initiates the Auth0 login flow.
+- `/django_auth0/logout`: Logs the user out of Django and Auth0.
+- `/django_auth0/callback`: The callback URL for Auth0 (ensure this is registered in your Auth0 Application settings).
 
 You can then use these in your templates:
 
 ### django template notation
 ```html
-<a href="{% url 'auth0_auth:login' %}">Login</a>
-<a href="{% url 'auth0_auth:logout' %}">Logout</a>
+<a href="{% url 'django_auth0:login' %}">Login</a>
+<a href="{% url 'django_auth0:logout' %}">Logout</a>
 ```
 
 ### Jinja2 template notation
 ```html
-<a href="{% url('auth0_auth:login') %}">Login</a>
-<a href="{% url('auth0_auth:logout') %}">Logout</a>
+<a href="{% url('django_auth0:login') %}">Login</a>
+<a href="{% url('django_auth0:logout') %}">Logout</a>
 ```
 
 ## Credits
